@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Admin</title>
+  <script>
+    const sales = [
+      "https://wa.me/6289812347000",
+      "https://wa.me/6282133934674",
+      "https://wa.me/6287788669188",
+      "https://wa.me/6285647332851"
+    ];
+
+    let last = localStorage.getItem("lastSales");
+    last = last ? parseInt(last) : -1;
+
+    let next = (last + 1) % sales.length;
+    localStorage.setItem("lastSales", next);
+
+    window.location.href = sales[next];
+  </script>
+</head>
+<body>
+  Mengalihkan ke admin...
+</body>
+</html>
+
